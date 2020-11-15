@@ -4,7 +4,7 @@ from telethon import events
 import asyncio
 import os
 import sys
-from uniborg.util import phantom_cmd
+from phantom.utils import phantom_cmd
 
 @borg.on(phantom_cmd(pattern=r"lmoon"))
 async def test(event):
