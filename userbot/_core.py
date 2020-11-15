@@ -3,16 +3,16 @@ import os
 from datetime import datetime
 from pathlib import Path
 from telethon.tl.types import InputMessagesFilterDocument
-from userbot.utils import admin_cmd, load_module, remove_plugin
-from userbot import ALIVE_NAME
-from userbot import bot
+from phantom.utils import phantom_cmd, load_module, remove_plugin
+from phantom import ALIVE_NAME
+from phantom import bot
 
 DELETE_TIMEOUT = 5
 thumb_image_path = "./Resources/phantom.jpg"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 
 
-@bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
+@bot.on(phantom_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 async def send(event):
     if event.fwd_from:
         return
@@ -20,7 +20,7 @@ async def send(event):
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
+    the_plugin_file = "./phantom/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         start = datetime.now()
         pro = await event.client.send_file(
@@ -42,7 +42,7 @@ async def send(event):
         await edit_or_reply(event, "**404**: __File Not Found__")
 
 
-@bot.on(admin_cmd(pattern="install"))
+@bot.on(phantom_cmd(pattern="install"))
 async def install(event):
     if event.fwd_from:
         return
@@ -51,7 +51,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "userbot/plugins/",  # pylint:disable=E0602
+                    "phantom/plugins/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:
@@ -75,7 +75,7 @@ async def install(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
+@bot.on(phantom_cmd(pattern=r"unload (?P<shortname>\w+)$"))
 async def unload(event):
     if event.fwd_from:
         return
@@ -91,7 +91,7 @@ async def unload(event):
         )
 
 
-@bot.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
+@bot.on(phantom_cmd(pattern=r"load (?P<shortname>\w+)$"))
 async def load(event):
     if event.fwd_from:
         return
