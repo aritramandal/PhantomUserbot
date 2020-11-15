@@ -1,15 +1,15 @@
 from telethon import events
 import asyncio
-from userbot.utils import phantom_cmd
-from userbot import ALIVE_NAME
+from phantom.utils import phantom_cmd
+from phantom import ALIVE_NAME
 import random, re
-from userbot import CMD_HELP
+from phantom import CMD_HELP
 from collections import deque
 import importlib.util
 import random
 from telethon import events
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Phantom User"
 
 @borg.on(phantom_cmd(pattern=r"clock"))
 async def _(event):
