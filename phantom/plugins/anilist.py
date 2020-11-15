@@ -8,8 +8,8 @@ import requests
 import re
 import json
 import asyncio
-from userbot import CMD_HELP
-from userbot.utils import phantom_cmd
+from phantom import CMD_HELP
+from phantom.utils import phantom_cmd
 
 async def callAPI(search_str):
     query = '''
