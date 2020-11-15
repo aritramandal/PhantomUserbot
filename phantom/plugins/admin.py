@@ -22,9 +22,9 @@ from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                ChatBannedRights, MessageEntityMentionName,
                                MessageMediaPhoto)
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot 
-from userbot.utils import register, errors_handler
-from userbot.utils import phantom_cmd
+from phantom import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot 
+from phantom.utils import register, errors_handler
+from phantom.utils import phantom_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
