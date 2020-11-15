@@ -3,7 +3,7 @@ from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from platform import uname
 from userbot import ALIVE_NAME
-from userbot.utils import admin_cmd, phantom_cmd
+from userbot.utils import phantom_cmd
 
 
 n = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
