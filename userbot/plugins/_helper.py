@@ -1,6 +1,6 @@
 from userbot import CMD_LIST
 from userbot import ALIVE_NAME
-from userbot.utils import admin_cmd
+from userbot.utils import phantom_cmd
 from platform import uname
 import sys
 from telethon import events, functions, __version__
@@ -59,7 +59,7 @@ async def cmd_list(event):
             await event.delete()
 
 
-@borg.on(admin_cmd(pattern="syntax (.*)"))
+@borg.on(phantom_cmd(pattern="syntax (.*)"))
 async def _(event):
     if event.fwd_from:
         return
