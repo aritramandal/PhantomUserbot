@@ -9,9 +9,9 @@ import random
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.errors import ChatSendMediaForbiddenError
-from userbot import ALIVE_NAME
-from userbot import ALIVE_PIC
-from userbot.utils import phantom_cmd
+from phantom import ALIVE_NAME
+from phantom import ALIVE_PIC
+from phantom.utils import phantom_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PHANTOM USER"
 
