@@ -2,7 +2,7 @@
 Syntax: .edd <User(s)>"""
 
 from telethon import functions
-from userbot.utils import phantom_cmd
+from phantom.utils import phantom_cmd
 
 
 @borg.on(phantom_cmd(pattern="edd ?(.*)"))
