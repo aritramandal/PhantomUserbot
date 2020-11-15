@@ -1,6 +1,6 @@
-from userbot import CMD_LIST
-from userbot import ALIVE_NAME
-from userbot.utils import phantom_cmd
+from phantom import CMD_LIST
+from phantom import ALIVE_NAME
+from phantom.utils import phantom_cmd
 from platform import uname
 import sys
 from telethon import events, functions, __version__
