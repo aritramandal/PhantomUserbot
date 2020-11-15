@@ -24,6 +24,11 @@ RANDOM_BIO =(
   "One day, I’m gonna make the onions cry"
   "Trying My Best !!",
   "Happy In Myself",
+  "Born SMART !!",
+  "Will Become Famous One Day",
+  "I AM Man of Miracle",
+  "Enjoying My Life",
+  "Planning for The Trip"
   "I AM UNIQUE",
 )
 PLANE=random.choice(RANDOM_BIO)
