@@ -42,7 +42,7 @@ if ALIVE_PIC is not None:
     print("Alive Pic Added Successfully")
     
 import glob
-path = 'userbot/plugins/*.py'
+path = 'phantom/plugins/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -50,7 +50,7 @@ for name in files:
         shortname = path1.stem
         load_module(shortname.replace(".py", ""))
 
-import userbot._core
+import phantom._core
 print("Everything is Alright, Do .alive or .help to Check Online Status of Your Bot !!")
 print("Join @PhantomOt For Reporting any Bug or an Issue !!")
 
