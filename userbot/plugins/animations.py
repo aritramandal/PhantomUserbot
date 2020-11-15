@@ -1,6 +1,6 @@
 from telethon import events
 import asyncio
-from userbot.utils import admin_cmd, phantom_cmd
+from userbot.utils import phantom_cmd
 from userbot import ALIVE_NAME
 import random, re
 from userbot import CMD_HELP
@@ -255,7 +255,7 @@ async def timer_blankx(e):
  await e.edit("`Tesla Wireless Charging (beta) Completed...\nDevice Detected: Nokia 1100 (Space Grey Varient)\nBattery Percentage:` [100%](https://telegra.ph/file/a45aa7450c8eefed599d9.mp4) ", link_preview=True)
 
 
-@borg.on(admin_cmd(pattern=r"lul$"))
+@borg.on(phantom_cmd(pattern=r"lul$"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -266,7 +266,7 @@ async def _(event):
 		deq.rotate(1)
     
 
-@borg.on(admin_cmd(pattern=r"nothappy$"))
+@borg.on(phantom_cmd(pattern=r"nothappy$"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -277,7 +277,7 @@ async def _(event):
 		deq.rotate(1)
 
 
-@borg.on(admin_cmd(outgoing=True, pattern="clock$"))
+@borg.on(phantom_cmd(outgoing=True, pattern="clock$"))
 async def _(event):
 	    if event.fwd_from:
 		    return
@@ -288,7 +288,7 @@ async def _(event):
 		    deq.rotate(1)
 
     
-@borg.on(admin_cmd(pattern="heart$"))		
+@borg.on(phantom_cmd(pattern="heart$"))		
 async def _(event):
 	if event.fwd_from:
 		return
@@ -299,7 +299,7 @@ async def _(event):
 		deq.rotate(1)        
 
         		
-@borg.on(admin_cmd(pattern="gym$", outgoing=True))
+@borg.on(phantom_cmd(pattern="gym$", outgoing=True))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -310,7 +310,7 @@ async def _(event):
 		deq.rotate(1)
 
     
-@borg.on(admin_cmd(pattern=f"earth$", outgoing=True))
+@borg.on(phantom_cmd(pattern=f"earth$", outgoing=True))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -321,7 +321,7 @@ async def _(event):
 		deq.rotate(1)
 
 
-@borg.on(admin_cmd(outgoing=True, pattern="moon$"))
+@borg.on(phantom_cmd(outgoing=True, pattern="moon$"))
 async def _(event):
 	    if event.fwd_from:
 		    return
@@ -332,7 +332,7 @@ async def _(event):
 		    deq.rotate(1)
 
 
-@borg.on(admin_cmd(pattern=r"candy$"))
+@borg.on(phantom_cmd(pattern=r"candy$"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -439,7 +439,6 @@ async def _(event):
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 15])
 
-###############################################################################################################################################
 	
 @borg.on(phantom_cmd(pattern=r"star$", outgoing=True))
 async def _(event):
@@ -787,7 +786,7 @@ async def _(event):
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 28])            
 		
-@borg.on(admin_cmd(pattern="virus$"))
+@borg.on(phantom_cmd(pattern="virus$"))
 async def _(event):
     if event.fwd_from:
         return
