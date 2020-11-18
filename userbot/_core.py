@@ -6,11 +6,11 @@ from telethon.tl.types import InputMessagesFilterDocument
 from userbot.utils import admin_cmd, load_module, remove_plugin
 from userbot import ALIVE_NAME
 from userbot import bot
-
+                
 DELETE_TIMEOUT = 5
 thumb_image_path = "./Resources/phantom.jpg"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
-
+               
 
 @bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 async def send(event):
@@ -41,7 +41,7 @@ async def send(event):
     else:
         await edit_or_reply(event, "**404**: __File Not Found__")
 
-
+          
 @bot.on(admin_cmd(pattern="install"))
 async def install(event):
     if event.fwd_from:
