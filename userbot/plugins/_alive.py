@@ -16,7 +16,7 @@ from userbot.utils import phantom_cmd, sudo_cmd
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PHANTOM USER"
 
 PHANTOM_IMG = "https://telegra.ph/file/d7eed31b87d84be1d88fa.jpg"
-
+  
 if ALIVE_PIC is None:
     ALIVE_PIC = PHANTOM_IMG
 else:
@@ -49,7 +49,7 @@ medianotallowed = (
     "\n**[❤️Deploy Your Own Phantom Userbot ❤️](https://dashboard.heroku.com/new?template=https://github.com/prothinkergang/Phantomuserbot)**"
 )
                    
-                   
+                     
 
 @borg.on(phantom_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
